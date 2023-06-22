@@ -22,9 +22,9 @@ public class Usuario implements Serializable{
     private String apellido;
     private Integer telefono;
     private String direccion;
-    private HashMap <Integer,String[]> listaAlergias;
+    private HashMap <String,String[]> listaAlergias;
 
-    public Usuario(Integer identificacion, String nombre, String apellido, Integer telefono, String direccion, HashMap <Integer,String[]> listaAlergias ){
+    public Usuario(Integer identificacion, String nombre, String apellido, Integer telefono, String direccion, HashMap <String,String[]> listaAlergias ){
         this.identificacion = identificacion;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -53,7 +53,7 @@ public class Usuario implements Serializable{
         return direccion;
     }
 
-    public HashMap<Integer, String[]> getListaAlergias() {
+    public HashMap<String, String[]> getListaAlergias() {
         return listaAlergias;
     }
 

@@ -22,9 +22,10 @@ public class VentanaP extends JFrame  {
     private JLabel id, nombre, apellido, telefono, direccion;
     private JTextField fildPacienteID, fildPacienteNombre, fildPacienteApellido, fildPacienteTelefono, fildPacienteDireccion;
 
-    private JPanel alergias;
+    private JPanel alergias = new JPanel();
     private JButton addAlergias;
-    private JComboBox<String> dropAlergias = new JComboBox<>();
+    private String[] alergiaslista = {"Seleccionar","No presenta Alergias","Alergia al polen primaveral","Sensibilidad a los ácaros del entorno","Reacción alérgica al moho ambiental","Hipersensibilidad a la caspa de animales","Alergia a picaduras de insectos","Intolerancia a medicamentos selectos","Alergia a alimentos comunes","Sensibilidad al látex","Reacción alérgica al níquel","Alergia al polvo doméstico","Intolerancia a mariscos","Alergia a los cacahuetes","Sensibilidad a la lactosa","Reacción alérgica a los huevos","Hipersensibilidad al trigo","Alergia a la soja","Intolerancia al pescado","Sensibilidad al gluten","Reacción alérgica a las nueces"};
+    private JComboBox<String> dropAlergias = new JComboBox<>(alergiaslista);
     private JTable tablaAlergias = new JTable();
 
     private JButton agregar, actualizar, cancelar;
@@ -106,13 +107,13 @@ public class VentanaP extends JFrame  {
         fildPacienteApellido.setBackground(fondopaneles);
         
         fildPacienteTelefono = new JTextField();
-        fildPacienteTelefono.setBounds(694,87,236,46);
+        fildPacienteTelefono.setBounds(644,87,236,46);
         fildPacienteTelefono.setFont(nuevaTipografia1);
         fildPacienteTelefono.setForeground(colorletrasfont);
         fildPacienteTelefono.setBackground(fondopaneles);
 
         fildPacienteDireccion = new JTextField();
-        fildPacienteDireccion.setBounds(694,149,236,46);
+        fildPacienteDireccion.setBounds(644,149,236,46);
         fildPacienteDireccion.setFont(nuevaTipografia1);
         fildPacienteDireccion.setForeground(colorletrasfont);
         fildPacienteDireccion.setBackground(fondopaneles);
@@ -149,7 +150,6 @@ public class VentanaP extends JFrame  {
         dropAlergias.setEditable(true);
         dropAlergias.setBackground(fondopaneles);
 
-        alergias = new JPanel();
         alergias.setBounds(7,68,493,181);
         alergias.setBackground(verderFondo);
 
