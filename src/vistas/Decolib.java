@@ -1,3 +1,11 @@
+/*
+ Archivo: Decolib.java
+ Parcial Fundamentos de programacion Orientado a Eventos
+ 22 de Junio de 2023
+
+ Autores:
+  @author Manuel Felipe Cardoso Forero (2027288)
+ */
 
  package vistas;
  import java.awt.Dimension;
