@@ -1,18 +1,29 @@
-## Getting Started
+## Parcial  - Sistema Clinica universidad del valle 
+Fundamentos de programacion orientado a Eventos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Autores:
+- Manuel Felipe Cardoso Forero.
 
-## Folder Structure
+Entregables:
+- Diagrama de Clases
+- URL del repositorio con el código de la aplicación
+- Codigo Aplicacion
 
-The workspace contains two folders by default, where:
+## Necesidad de usario
+La clínica Univalle requiere el desarrollo de un software que le permita gestionar el registro de  pacientes.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Requerimientos
+- El usuario deberá ingresar la identificación del paciente, si la identificación se encuentra registrada, 
+la aplicación deberá traer la información almacenada en la colección de datos y se desplegará en 
+la interfaz gráfica de usuario, la información quedará disponible para ser modificada, y se podrá 
+actualizar presionado clic en el botón actualizar.
+- Si la identificación ingresada no existe en la colección de datos, deberá permitir ingresar la 
+información y agregarla a la colección de datos, presionando clic en el botón grabar, que es el 
+mismo botón actualizar, pero en este escenario se llamará grabar.
+- En el combo box deberá estar cargadas todas las alergias almacenadas en la colección alergias. 
+Al momento de estar editando la información, bien sea porque va a crear un registro nuevo o va a 
+modificar información, se podrá agregar más alergias al paciente.
+- Se adicionará alergias al paciente mediante la selección de una opción del combo box y luego
+presionando clic sobre el botón Agregar, una vez realizado lo anterior, se mostrará el nombre de 
+la alergia en el listado.
+- Los datos deberán ser persistentes, bien sea en archivo binario o en archivos de texto.
