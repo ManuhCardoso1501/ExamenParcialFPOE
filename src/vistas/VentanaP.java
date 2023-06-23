@@ -11,6 +11,7 @@ package vistas;
 import java.awt.*;
 import java.awt.event.*;
 import java.lang.reflect.Array;
+import java.sql.Driver;
 
 import javax.swing.*;
 import javax.swing.text.StyledEditorKit.AlignmentAction;
@@ -23,6 +24,7 @@ public class VentanaP extends JFrame  {
     private JTextField fildPacienteID, fildPacienteNombre, fildPacienteApellido, fildPacienteTelefono, fildPacienteDireccion;
 
     private JPanel alergias = new JPanel();
+    private JScrollPane paneltablaAlergias = new JScrollPane();
     private JButton addAlergias;
     private String[] alergiaslista = {"Seleccionar","No presenta Alergias","Alergia al polen primaveral","Sensibilidad a los ácaros del entorno","Reacción alérgica al moho ambiental","Hipersensibilidad a la caspa de animales","Alergia a picaduras de insectos","Intolerancia a medicamentos selectos","Alergia a alimentos comunes","Sensibilidad al látex","Reacción alérgica al níquel","Alergia al polvo doméstico","Intolerancia a mariscos","Alergia a los cacahuetes","Sensibilidad a la lactosa","Reacción alérgica a los huevos","Hipersensibilidad al trigo","Alergia a la soja","Intolerancia al pescado","Sensibilidad al gluten","Reacción alérgica a las nueces"};
     private JComboBox<String> dropAlergias = new JComboBox<>(alergiaslista);
@@ -49,7 +51,6 @@ public class VentanaP extends JFrame  {
         setVisible(true);
         setResizable(false);
         setLayout(null);
-        setAlwaysOnTop(true);
 
         Color fondopaneles = new Color(225, 236, 200);
         Color verderFondo = new Color(160, 196, 157);
@@ -117,6 +118,7 @@ public class VentanaP extends JFrame  {
         fildPacienteDireccion.setFont(nuevaTipografia1);
         fildPacienteDireccion.setForeground(colorletrasfont);
         fildPacienteDireccion.setBackground(fondopaneles);
+        
 
         jpdatos.add(id);    
         jpdatos.add(nombre);
@@ -136,7 +138,7 @@ public class VentanaP extends JFrame  {
         jpalergias.setLayout(null);
         add(jpalergias);
 
-        addAlergias = new JButton("Agregar");
+        addAlergias = new JButton("Añadir");
         addAlergias.setBounds(17,20,147,35);
         addAlergias.setFont(nuevaTipografia1);
         addAlergias.setForeground(colorletrasfont);
@@ -149,6 +151,7 @@ public class VentanaP extends JFrame  {
         dropAlergias.setOpaque(true);
         dropAlergias.setEditable(true);
         dropAlergias.setBackground(fondopaneles);
+        dropAlergias.setEditable(false);
 
         alergias.setBounds(7,68,493,181);
         alergias.setBackground(verderFondo);
@@ -228,5 +231,21 @@ public class VentanaP extends JFrame  {
     public void setTablaAlergias(JTable tablaAlergias) {
         this.tablaAlergias = tablaAlergias;
     }
+
+    public JScrollPane getPaneltablaAlergias() {
+        return paneltablaAlergias;
+    }
+
+    public void setPaneltablaAlergias(JScrollPane paneltablaAlergias) {
+        this.paneltablaAlergias = paneltablaAlergias;
+        alergias.add(paneltablaAlergias);
+    }
+
+    public JPanel getPanelAlergias() {
+        return alergias;
+    }
+
+    
+
 
 }

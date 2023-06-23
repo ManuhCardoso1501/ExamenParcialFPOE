@@ -7,12 +7,14 @@
   @author Manuel Felipe Cardoso Forero (2027288)
  */
 
+import controladores.ControladorPrincipal;
 import vistas.VentanaP;
 
 
 public class Main {
     public static void main(String args[]){
         VentanaP ventanaP = new VentanaP();
+        ControladorPrincipal controladorPrincipal = new ControladorPrincipal(ventanaP);
     }
 
     }

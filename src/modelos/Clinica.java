@@ -11,7 +11,7 @@ package modelos;
 import daos.*;
 import java.io.Serializable;
 
-public class Clinica {
+public class Clinica implements Serializable{
     public static final long serialVersionUID = 1L;
     public String nombreClinica;
     private UsuarioDAOexte usuario;

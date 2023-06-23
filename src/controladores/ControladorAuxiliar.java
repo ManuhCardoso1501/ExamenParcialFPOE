@@ -104,4 +104,5 @@ public class ControladorAuxiliar {
 
         ventanaP.getDropAlergias().setSelectedItem(tablaAlergia);
     }
+
 }
